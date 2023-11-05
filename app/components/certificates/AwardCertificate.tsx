@@ -91,7 +91,7 @@ export default function AwardCertificate(props: Props) {
       //   .record(certificateId)
       //   .call("updateTokenId", [mintedTokenId.toString()]);
       setLoading(false);
-
+      console.log("minted token");
       handleClose();
     } catch (error) {
       console.log(error);

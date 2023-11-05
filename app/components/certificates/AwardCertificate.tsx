@@ -41,9 +41,7 @@ export default function AwardCertificate(props: Props) {
     try {
       const web3Modal = new Web3Modal();
       const connection = await web3Modal.connect();
-      const provider = new ethers.JsonRpcProvider(
-        `https://goerli.infura.io/v3/80b986daf63447ceb9978477a1b451c9`
-      );
+      const provider = new ethers.BrowserProvider(connection);
       const signer = await provider.getSigner();
       let contract = new ethers.Contract(ElimuAddress, Elimu.abi, signer);
 
